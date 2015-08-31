@@ -6,7 +6,7 @@ export CON_NAME=tomcat_t
 export REG_URL=d.nicescale.com:5000
 export IMAGE=tomcat
 export TAGS="8.0 8.0.26"
-export BASE_IMAGE=microimages/alpine
+export BASE_IMAGE=microimages/jre
 
 docker pull $REG_URL/$BASE_IMAGE
 

@@ -1,4 +1,4 @@
-FROM microimages/jre:7
+FROM microimages/jre
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
