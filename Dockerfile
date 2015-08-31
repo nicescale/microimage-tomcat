@@ -11,8 +11,8 @@ ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOM
 
 RUN wget "$TOMCAT_TGZ_URL" -O /tmp/tomcat.tar.gz \
 	&& tar zxf /tmp/tomcat.tar.gz \
-	&& rm bin/*.bat \
-	&& rm tomcat.tar.gz
+#	&& rm bin/*.bat \
+	&& rm /tmp/tomcat.tar.gz
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
