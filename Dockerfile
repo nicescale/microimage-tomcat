@@ -14,7 +14,7 @@ RUN wget "$TOMCAT_TGZ_URL" -O /tmp/tomcat.tar.gz \
 	&& cd $CATALINA_HOME && tar zxf /tmp/tomcat.tar.gz \
 	&& mv apache-tomcat-$TOMCAT_VERSION/* ./ && rmdir apache-tomcat-$TOMCAT_VERSION \
 	&& rm bin/*.bat \
-	&& mv webapps /app && ln -s /app webapps \
+	&& mv webapps/* /app/ && rmdir webapps && ln -s /app webapps \
 	&& rm /tmp/tomcat.tar.gz
 
 WORKDIR /app
