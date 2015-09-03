@@ -1,5 +1,5 @@
 
-![tomcat](https://csphere.cn/assets/4a1fe001-8c71-401c-92ef-d8cdce2d6fc6)
+![tomcat](https://csphere.cn/assets/6d930d99-f449-4c62-ac18-f076b1c4e411)
 
 ## 如何使用该镜像
 
