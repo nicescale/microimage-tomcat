@@ -25,7 +25,7 @@ $ docker run -it --rm -p 8888:8080 index.csphere.cn/microimages/tomcat:8.0
 	JRE_HOME:        /usr
 	CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
 
-配置文件位于 `/usr/local/tomcat/conf/`. 默认情况下没有在 "manager-gui" 角色里配置用户，如果你需要使用该应用，则必须定在 `tomcat-users.xml` 配置中定义这样一个用户。
+配置文件位于 `/usr/local/tomcat/conf/`. 默认情况下没有在 "manager-gui" 角色里配置用户，如果你需要使用该应用，则必须在 `tomcat-users.xml` 配置中定义这样一个用户。
 
 ## 授权和法律
 
