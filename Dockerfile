@@ -15,7 +15,7 @@ RUN wget "$TOMCAT_TGZ_URL" -O /tmp/tomcat.tar.gz \
 	&& mv apache-tomcat-$TOMCAT_VERSION/* ./ && rmdir apache-tomcat-$TOMCAT_VERSION \
 	&& rm bin/*.bat \
 	&& mv webapps/* /app/ && rmdir webapps && ln -s /app webapps \
-	&& env|grep -vwE "PWD|_|OLDPWD" > /usr/local/tomcat/bin/setenv.sh
+	&& sed -i '/^CLASSPATH=$/d' /usr/local/tomcat/bin/catalina.sh \
 	&& rm /tmp/tomcat.tar.gz
 
 WORKDIR /app
