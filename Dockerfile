@@ -7,7 +7,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.28
+ENV TOMCAT_VERSION 8.0.30
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN wget "$TOMCAT_TGZ_URL" -O /tmp/tomcat.tar.gz \
@@ -15,7 +15,6 @@ RUN wget "$TOMCAT_TGZ_URL" -O /tmp/tomcat.tar.gz \
 	&& mv apache-tomcat-$TOMCAT_VERSION/* ./ && rmdir apache-tomcat-$TOMCAT_VERSION \
 	&& rm bin/*.bat \
 	&& mv webapps/* /app/ && rmdir webapps && ln -s /app webapps \
-	&& sed -i '/^CLASSPATH=$/d' /usr/local/tomcat/bin/catalina.sh \
 	&& rm /tmp/tomcat.tar.gz
 
 WORKDIR /app
