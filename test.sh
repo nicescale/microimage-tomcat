@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -e
+set -xe
 
-docker rm -f "$CON_NAME" > /dev/null 2>&1
+docker rm -f "$CON_NAME" > /dev/null 2>&1 || true
 docker run -d --name $CON_NAME $IMAGE
 
 if [ ! -f /tmp/sample.war ]; then
